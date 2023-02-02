@@ -1,0 +1,2 @@
+# CardDetails
+project for just javascript and some html , css and bootstrab
