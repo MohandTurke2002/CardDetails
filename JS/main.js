@@ -636,31 +636,9 @@ btn.addEventListener("click", function () {
   } else if (form.contains(document.querySelector(".wrong"))) {
     return false;
   } else {
-    parentForm.remove();
-    let confirm = document.createElement("div");
-    confirm.classList.add("confirm");
-    confirm.classList.add("col-sm-12");
-    confirm.classList.add("col-md-6");
-    confirm.classList.add("col-lg-5");
-    let img = document.createElement("img");
-    img.setAttribute("src", "../Images/icon-complete.png");
-    let title = document.createElement("h3");
-    title.appendChild(document.createTextNode("THANK YOU!"));
-    let para = document.createElement("p");
-    para.appendChild(
-      document.createTextNode("we have added your card details")
-    );
-    let btnConfirm = document.createElement("input");
-    btnConfirm.setAttribute("type", "button");
-    btnConfirm.setAttribute("value", "Continue");
-    btnConfirm.classList.add("continue");
-    btnConfirm.classList.add("btn-success");
-    btnConfirm.classList.add("rounded-2");
-    btnConfirm.classList.add("p-2");
-    confirm.appendChild(img);
-    confirm.appendChild(title);
-    confirm.appendChild(para);
-    confirm.appendChild(btnConfirm);
-    row.appendChild(confirm);
+    let formDis = document.querySelector("form");
+    formDis.style.cssText = "display: none;";
+    let confirm = document.querySelector(".confirm");
+    confirm.style.cssText = "display: flex";
   }
 });
